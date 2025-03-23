@@ -1,21 +1,35 @@
-math_operation = input('Введіть Операнд - оператор - операнд: ')
+first_operand = float(input('Введіть перше число: '))
 
-if math_operation[1] == '+':
-    result_add = int(math_operation[0]) + int(math_operation[2])
-    print('Результат операції додавання:', result_add)
+math_operation = input('Введіть  оператор +,-,*,/: ')
 
-elif math_operation[1] == '-':
-    result_subtraction = int(math_operation[0]) - int(math_operation[2])
-    print('Результат операції віднімання:', result_subtraction)
+second_operand = float(input('Введіть друге число: '))
 
-elif math_operation[1] == '*':
-    result_multiplication = int(math_operation[0]) * int(math_operation[2])
-    print('Результат операції множення:', result_multiplication)
+result_operation = 0
 
-elif math_operation[1] == '/' and math_operation[2] != 0 :
-    result_division = int(math_operation[0]) / int(math_operation[2])
-    print('Результат операції ділення:', result_division)
+if math_operation == '+':
+    result_operation = first_operand + second_operand
+    print('Результат операції додавання:', result_operation)
+
+elif math_operation == '-':
+    result_operation = first_operand - second_operand
+    print('Результат операції віднімання:', result_operation)
+
+elif math_operation == '*':
+    result_operation = first_operand * second_operand
+    print('Результат операції множення:', result_operation)
+
+elif math_operation == '/' and second_operand != 0:
+    result_operation = first_operand / second_operand
+    print('Результат операції множення:', result_operation)
+
 else:
-    print("В даній версії інші оператори відсутні")
+    print("Можливо ви використовуєте відсутній оператор або ділите на 0")
+
+
+
+
+
+
+
 
 
